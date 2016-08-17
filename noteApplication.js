@@ -39,12 +39,21 @@ class NoteApplication {
 		console.log(filtered)
 	}
 	
+	delete(note_id){
+		this.notes.splice(note_id);
+	}
+	edit(note_id, new_content){
+	var note = this.get(note_id);
+	    note.note_content = new_content; 
+	}
 }
 
 var na = new NoteApplication("Tosin");
-na.create("gfjgjhgjhgjgjhgjhg")
-na.create("i am getting old")
+//na.delete(0)
+//na.create("gfjgjhgjhgjgjhgjhg")
+//na.create("i am getting old")
 //na.search("i")
+//na.edit(0,"ertet")
 console.log(na.get(0));
 //na.listNotes();
 
